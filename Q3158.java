@@ -1,18 +1,14 @@
-class hey{
-    public static void main(String[] args) {
-        // int a = 10;
-        // int b = 20;
-        // {
-        //      a = 30;
-        //      int c = 25;
-        // }
-        // System.out.println(a);
-        System.out.println(fun(34, 23,78));
-    }
-    static int fun(int a, int b){
-        return a +b;
-    }
-    static int fun(int a, int b, int c){
-        return a +b+c;
+class Q3158{
+    static int duplicateNumbersXOR(int[] nums) {
+        int result = 0;
+        for(int i=0; i<nums.length; i++){
+            for(int j = i+1; j<nums.length; j++){
+                if(nums[i] == nums[j]){
+                    result ^= nums[i];
+                    break;
+                }
+            }
+        }
+        return result;
     }
 }
